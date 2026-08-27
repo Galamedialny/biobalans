@@ -4,6 +4,16 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Ochrana súkromia a cookies",
   description: "Informácie o spracúvaní osobných údajov a používaní cookies na webovej stránke BioBalans.",
+  alternates: { canonical: "/ochrana-sukromia" },
+  openGraph: {
+    type: "website",
+    locale: "sk_SK",
+    url: "https://www.biobalans.sk/ochrana-sukromia",
+    siteName: "BioBalans",
+    title: "Ochrana súkromia a cookies | BioBalans",
+    description: "Informácie o spracúvaní osobných údajov a používaní cookies na stránke BioBalans.",
+  },
+  robots: { index: true, follow: true },
 };
 
 export default function PrivacyPage() {
