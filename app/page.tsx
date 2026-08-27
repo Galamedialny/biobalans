@@ -18,8 +18,66 @@ const services = [
   ["Prednášky a workshopy", "Praktické stretnutia o výžive, zdravom životnom štýle, prevencii, zvládaní stresu a psychohygiene."],
 ];
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.biobalans.sk/#website",
+      url: "https://www.biobalans.sk/",
+      name: "BioBalans",
+      inLanguage: "sk-SK",
+      publisher: { "@id": "https://www.biobalans.sk/#business" }
+    },
+    {
+      "@type": "HealthAndBeautyBusiness",
+      "@id": "https://www.biobalans.sk/#business",
+      name: "BioBalans",
+      legalName: "optiMM s. r. o.",
+      url: "https://www.biobalans.sk/",
+      logo: "https://www.biobalans.sk/images/biobalans-logo.webp",
+      image: "https://www.biobalans.sk/images/martina.webp",
+      telephone: "+421915195930",
+      email: "info@biobalans.sk",
+      priceRange: "€€",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Komenského 634/18",
+        postalCode: "093 01",
+        addressLocality: "Vranov nad Topľou",
+        addressCountry: "SK"
+      },
+      openingHoursSpecification: [{
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        opens: "09:00",
+        closes: "17:00"
+      }],
+      founder: { "@id": "https://www.biobalans.sk/#martina" },
+      sameAs: ["https://www.facebook.com/biobalans.sk"],
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Služby BioBalans",
+        itemListElement: [
+          "Výživové poradenstvo", "Osobná BioBalans pyramída potravín",
+          "One Brain – 3 in 1 Concepts", "Systemické konštelácie",
+          "InBody analýza zloženia tela", "Prednášky a workshopy"
+        ].map(name => ({ "@type": "Offer", itemOffered: { "@type": "Service", name } }))
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.biobalans.sk/#martina",
+      name: "Ing. Martina Melkovičová",
+      jobTitle: "Výživová poradkyňa a lektorka",
+      worksFor: { "@id": "https://www.biobalans.sk/#business" },
+      image: "https://www.biobalans.sk/images/martina.webp"
+    }
+  ]
+};
+
 export default function Home() {
-  return <main>
+  return <main><script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(structuredData)}}/>
     <header className="site-header">
       <Link href="#domov" className="brand"><Image src="/images/biobalans-logo.webp" alt="BioBalans" width={58} height={58} priority/><span><b>BIO BALANS</b><small>HOLISTICKÉ CENTRUM</small></span></Link>
       <nav><a href="#o-mne">O mne</a><a href="#biobalans">Čo je BioBalans</a><a href="#sluzby">Služby</a><a href="#kontakt">Kontakt</a><a className="facebook-nav" href="https://www.facebook.com/biobalans.sk" target="_blank" rel="noreferrer"><span className="nav-fb-icon">f</span> BioBalans</a><Link className="nav-heart" href="/hanymeloz">HanyMel OZ</Link></nav>
