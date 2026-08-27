@@ -15,7 +15,7 @@ export default function Home() {
   return <main>
     <header className="site-header">
       <Link href="#domov" className="brand"><Image src="/images/biobalans-logo.webp" alt="BioBalans" width={58} height={58} priority/><span><b>BIO BALANS</b><small>HOLISTICKÉ CENTRUM</small></span></Link>
-      <nav><a href="#o-mne">O mne</a><a href="#biobalans">Čo je BioBalans</a><a href="#sluzby">Služby</a><a href="#kontakt">Kontakt</a><a className="facebook-nav" href="https://www.facebook.com/biobalans.sk" target="_blank" rel="noreferrer">f Facebook</a><Link className="nav-heart" href="/hanymeloz">HanyMel OZ</Link></nav>
+      <nav><a href="#o-mne">O mne</a><a href="#biobalans">Čo je BioBalans</a><a href="#sluzby">Služby</a><a href="#kontakt">Kontakt</a><a className="facebook-nav" href="https://www.facebook.com/biobalans.sk" target="_blank" rel="noreferrer"><span className="nav-fb-icon">f</span> BioBalans</a><Link className="nav-heart" href="/hanymeloz">HanyMel OZ</Link></nav>
     </header>
     <section id="domov" className="hero">
       <div className="hero-copy"><p className="eyebrow">Holistické centrum vo Vranove nad Topľou</p><h1>Rovnováha začína<br/>porozumením <em>sebe.</em></h1><p className="lead">Spájame výživu, prácu s telom a vnútorným prežívaním do individuálneho prístupu, ktorý rešpektuje jedinečnosť každého človeka.</p><div className="hero-actions"><a className="button" href="#kontakt">Objednať sa</a><a className="text-link" href="#sluzby">Pozrieť služby →</a></div><div className="hero-facts"><span><b>Individuálny</b> prístup</span><span><b>9:00 – 17:00</b> na objednávku</span></div></div>
