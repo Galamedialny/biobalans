@@ -12,3 +12,5 @@
 .contact-intro{overflow:visible}.contact-intro>img{object-position:27% 43%;transform:scale(1.35);transform-origin:27% 43%;clip-path:circle(47% at 50% 50%);margin:8px 0 34px 8px}.footer-facebook{display:inline-flex;align-items:center;gap:7px}.footer-fb-icon{width:20px;height:20px;border-radius:50%;display:inline-grid;place-items:center;background:#1877f2;color:#fff;font:bold 16px Arial;line-height:1;padding-top:3px}
 
 .facebook-nav{display:inline-flex;align-items:center;gap:7px}.nav-fb-icon{width:22px;height:22px;border-radius:50%;display:inline-grid;place-items:center;background:#1877f2;color:#fff;font:bold 17px Arial;line-height:1;padding-top:3px}
+
+.contact-intro>img{object-position:center!important;transform:scale(1.65) translate(12%,-6%)!important;transform-origin:center!important;clip-path:circle(47% at 50% 50%)!important}
