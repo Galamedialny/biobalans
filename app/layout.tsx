@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import CookieConsent from "./components/CookieConsent";
 import WhatsAppButton from "./components/WhatsAppButton";
+import GoogleAnalytics from "./components/GoogleAnalytics";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.biobalans.sk"),
@@ -52,5 +53,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="sk"><body>{children}<WhatsAppButton/><CookieConsent/></body></html>;
+  return <html lang="sk"><body>{children}<WhatsAppButton/><CookieConsent/><GoogleAnalytics/></body></html>;
 }
