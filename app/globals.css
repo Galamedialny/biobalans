@@ -39,3 +39,5 @@
 
 
 .contact-icon svg{width:20px;height:20px;fill:none;stroke:#17362d;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.whatsapp-badge svg{width:18px;height:18px}.whatsapp-badge svg path:first-child{fill:none;stroke:#128c4a;stroke-width:2}.whatsapp-badge svg path:last-child{fill:#128c4a;stroke:none}
+
+.hany-footer-line{padding:14px 5vw;display:flex;align-items:center;justify-content:space-between;gap:25px;border-top:1px solid #e2e6e3;background:#fafbfa;font-size:.75rem;color:#68766f}.hany-footer-line a{font-weight:800;color:#17362d}@media(max-width:700px){.hany-footer-line{align-items:flex-start;flex-direction:column}}
