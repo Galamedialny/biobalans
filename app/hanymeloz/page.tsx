@@ -53,6 +53,8 @@ const supporters = [
     name: "Nadácia Respect",
     logo: "/images/partner-respect.webp",
     description: "Hanke pomohla konkrétnym finančným príspevkom na potrebnú podporu a pomôcky.",
+    href: "https://www.nadaciarespect.sk/",
+    website: "www.nadaciarespect.sk",
   },
   {
     name: "Moon",
@@ -70,6 +72,8 @@ const supporters = [
     name: "Only in Vranov",
     logo: "/images/partner-onlyinvranov.webp",
     description: "Regionálny mediálny partner, ktorý pomáha dostať Hankin príbeh a výzvy k ľuďom vo Vranove a okolí.",
+    href: "https://www.onlyinvranov.sk/",
+    website: "www.onlyinvranov.sk",
   },
 ];
 
@@ -83,7 +87,7 @@ export default function HanyMelPage(){return <main className="hany-page"><script
   <section id="partneri" className="supporters-section">
     <div className="supporters-heading"><div><p className="eyebrow pink-text">Ďakujeme</p><h2>Hanke pomohli partneri s veľkým srdcom.</h2></div><p>Ich pomoc má konkrétnu podobu – od finančnej podpory až po šírenie Hankinho príbehu medzi ľudí, ktorí dokážu podať pomocnú ruku.</p></div>
     <div className="supporters-grid">{supporters.map((supporter) => {
-      const card = <><div className="supporter-logo"><Image src={supporter.logo} alt={`Logo ${supporter.name}`} width={720} height={300}/></div><div className="supporter-copy"><h3>{supporter.name}</h3><p>{supporter.description}</p>{supporter.href&&<span>Viac informácií <b aria-hidden="true">↗</b></span>}</div></>;
+      const card = <><div className="supporter-logo"><Image src={supporter.logo} alt={`Logo ${supporter.name}`} width={720} height={300}/></div><div className="supporter-copy"><h3>{supporter.name}</h3><p>{supporter.description}</p>{supporter.href&&<span>{supporter.website??"Viac informácií"} <b aria-hidden="true">↗</b></span>}</div></>;
       return supporter.href ? <a className="supporter-card" href={supporter.href} target="_blank" rel="noreferrer" key={supporter.name}>{card}</a> : <article className="supporter-card" key={supporter.name}>{card}</article>;
     })}</div>
     <p className="supporters-thanks">Hanku podporili aj ďalší ľudia s veľkým srdcom. Každému z vás úprimne ďakujeme.</p>
