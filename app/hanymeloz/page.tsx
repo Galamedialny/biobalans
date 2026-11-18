@@ -61,8 +61,8 @@ const supporters = [
     href: "https://www.moonmerch.cz/",
   },
   {
-    name: "GALA MEDIA",
-    logo: "/images/partner-galamedia.webp",
+    name: "Gala Media",
+    logo: "/images/partner-galamedia.png",
     description: "Reklamný a mediálny partner, ktorý pomáha s komunikáciou, propagáciou a zviditeľnením Hankinho príbehu.",
     href: "https://www.galamedia.sk/",
   },
